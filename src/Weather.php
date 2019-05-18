@@ -29,12 +29,12 @@ class Weather
 
     public function getLiveWeather($city, $format = 'json')
     {
-        return $this->getWeather($city, 'base', $format);
+        return $this->getWeather($city, 'live', $format);
     }
 
     public function getForecastsWeather($city, $format = 'json')
     {
-        return $this->getWeather($city, 'all', $format);
+        return $this->getWeather($city, 'forecast', $format);
     }
 
     public function getWeather($city, string $type = 'live', string $format = 'json')
