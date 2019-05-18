@@ -1,6 +1,6 @@
 <h1 align="center">Weather</h1>
 
-<p align="center">:rainbow: 基于 <a href="https://lbs.amap.com/dev/id/newuser">高德开放平台</a> 的 PHP
+<p align="center">:rainbow: 基于 [高德开放平台](https://lbs.amap.com/dev/id/newuser) 的 PHP
 天气信息组件。</p>
 
 [![Build Status](https://travis-ci.org/RealZark/weather.svg?branch=master)](https://travis-ci.org/RealZark/weather)
