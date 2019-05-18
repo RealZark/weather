@@ -28,6 +28,8 @@ $weather = new Weather($key);
 
 ```php
 $response = $weather->getWeather('深圳');
+或者
+$response = $weather->getLiveWeather('深圳');
 ```
 
 示例：
@@ -57,7 +59,9 @@ $response = $weather->getWeather('深圳');
 ## 获取近期天气预报
 
 ```php
-$response = $weather->getWeather('深圳', 'all');
+$response = $weather->getWeather('深圳', 'forecast');
+或者
+$response = $weather->getForecastsWeather('深圳');
 ```
 
 示例：
@@ -134,7 +138,9 @@ $response = $weather->getWeather('深圳', 'all');
 第三个参数为返回值类型，可选 `json` 与 `xml`，默认 `json`：
 
 ```php
-$response = $weather->getWeather('深圳', 'all', 'xml');
+$response = $weather->getWeather('深圳', 'live', 'xml');
+$response = $weather->getLiveWeather('深圳', 'xml');
+$response = $weather->getForecastsWeather('深圳', 'xml');
 ```
 
 示例：
@@ -164,7 +170,12 @@ $response = $weather->getWeather('深圳', 'all', 'xml');
 ## 参数说明
 
 ```php
-array|string getWeather(string $city, string $type = 'base', string $format = 'json')
+// 通用方法，$type 可选值 'live'(实时天气), 'forecast'(近期天气预报)
+array|string getWeather(string $city, string $type = 'live', string $format = 'json')
+// 获取实时天气
+array|string getLiveWeather(string $city, string $format = 'json')
+// 获取近期天气预报
+array|string getForecastsWeather(string $city, string $format = 'json')
 ```
 
 * `$city` - 城市名，比如：“深圳”；
