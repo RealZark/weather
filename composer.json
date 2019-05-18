@@ -1,0 +1,28 @@
+{
+    "name": "realzark/weather",
+    "description": "A weather SDK",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "RealZark",
+            "email": "35647209@qq.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "phpunit/phpunit": "^8.1",
+        "mockery/mockery": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "RealZark\\Weather\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "RealZark\\Weather\\ServiceProvider"
+            ]
+        }
+    }
+}
