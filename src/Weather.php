@@ -3,8 +3,8 @@
 namespace RealZark\Weather;
 
 use GuzzleHttp\Client;
-use RealZark\Weather\Exceptions\InvalidArgumentException;
 use RealZark\Weather\Exceptions\HttpException;
+use RealZark\Weather\Exceptions\InvalidArgumentException;
 
 class Weather
 {
@@ -37,11 +37,12 @@ class Weather
         return $this->getWeather($city, 'forecast', $format);
     }
 
-    public function getWeather($city,string $type = 'live',string $format = 'json')
-    {$url = 'https://restapi.amap.com/v3/weather/weatherInfo';
+    public function getWeather($city, string $type = 'live', string $format = 'json')
+    {
+        $url = 'https://restapi.amap.com/v3/weather/weatherInfo';
 
         $types = [
-            'live' => 'base',
+            'live'     => 'base',
             'forecast' => 'all',
         ];
 
@@ -54,10 +55,10 @@ class Weather
         }
 
         $query = array_filter([
-            'key' => $this->key,
-            'city' => $city,
-            'output' => $format,
-            'extensions' =>  $types[$type],
+            'key'        => $this->key,
+            'city'       => $city,
+            'output'     => $format,
+            'extensions' => $types[$type],
         ]);
 
         try {
@@ -70,5 +71,4 @@ class Weather
             throw new HttpException($e->getMessage(), $e->getCode(), $e);
         }
     }
-
 }
