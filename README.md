@@ -4,6 +4,7 @@
 天气信息组件。</p>
 
 [![Build Status](https://travis-ci.org/RealZark/weather.svg?branch=master)](https://travis-ci.org/RealZark/weather)
+![StyleCI build status](https://github.styleci.io/repos/112071240/shield) 
 
 ## 安装
 
